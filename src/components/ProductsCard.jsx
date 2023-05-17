@@ -32,12 +32,12 @@ export const ProductsCard = ({product}) => {
 
 
   return (
-    <div  className='group relative'>
+    <div  className='group relative my-card'>
       <div  className="w-full h-96 cursor-pointer overflow-hidden">
         <img onClick={handleDetails} className=' h-full w-full object-cover group-hover:scale-110 duration-500'
-         src={image} alt="" />
+         src={"http://127.0.0.1:5000/images/"+ image} alt="" />
       </div>
-      <div className="w-full border-[1px] px-2 py-4">
+      <div className="w-full px-2 py-4">
           <div>
             <h2 className='font-arial text-xl font-bold '>{product_tittle}</h2>
           </div>
@@ -49,7 +49,7 @@ export const ProductsCard = ({product}) => {
           </div>
 
         </div>
-        <div className='flex justify-between mt-2'>
+        <div className='flex justify-center mt-2'>
           <button onClick={()=>dispatch(addToCart({
             _id: product_id, 
             title: product_tittle,
@@ -57,8 +57,8 @@ export const ProductsCard = ({product}) => {
             price: product_price,
             quantity: 1,
             description: product_details
-          })) && toast.success(`${product_tittle} is added`)} className='bg-light-gray text-blue-600 hover:text-blue-400'>
-            add To Cart
+          })) && toast.success(`${product_tittle} is added`)} className='inline-block rounded-md border border-black bg-black px-8 py-3 text-center font-medium text-white hover:bg-white hover:text-black '>
+            Add To Cart
           </button>
         </div>
         <div className='top-2 right-2 absolute'>

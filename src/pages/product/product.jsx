@@ -52,7 +52,7 @@ export const Product = () => {
         <div className="w-2/5 relative">
           <img
             className="w-full h-[550px] object-cover"
-            src={details.image}
+            src={"http://127.0.0.1:5000/images/"+ details.image}
             alt=""
           />
           <div className="absolute top-2 right-2">
@@ -118,9 +118,9 @@ export const Product = () => {
                   })
                 ) && toast.success(`${details.title} is added`)
               }
-              className="bg-black text-white py-3 px-6 active:bg-gray-800"
+              className="inline-block rounded-md border border-black bg-black px-8 py-3 text-center font-medium text-white hover:bg-white hover:text-black "
             >
-              add To Cart
+              Add To Cart
             </button>
           </div>
           <p className="text-base text-gray-500">

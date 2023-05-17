@@ -11,22 +11,22 @@ const callouts = [
       "https://images.meesho.com/images/products/66957204/4sotn_512.jpg",
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    href: "/category/Suit",
+    href: "/category/Acrylic",
   },
   {
     name: "",
     description: "Plastic",
-    imageSrc: "https://m.media-amazon.com/images/I/61mLhK9ZbQL._SY355_.jpg",
+    imageSrc: "https://m.media-amazon.com/images/I/41jZG7F9-nL._SY450_.jpg",
     imageAlt:
-      "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "/category/Formal",
+    "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
+    href: "/category/Plastic",
   },
   {
     name: "",
     description: "Cotton",
-    imageSrc: "https://m.media-amazon.com/images/I/41jZG7F9-nL._SY450_.jpg",
+    imageSrc: "https://m.media-amazon.com/images/I/61mLhK9ZbQL._SY355_.jpg",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "/category/Tradistional",
+    href: "/category/Cotton",
   },
 ];
 

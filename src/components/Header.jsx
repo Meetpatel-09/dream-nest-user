@@ -19,23 +19,23 @@ export const Header = () => {
         </Link>
         <div className="flex gap-5 items-center">
           <ul className="flex items-center gap-8 cursor-pointer">
-            <Link to={"/"}>
+            <Link to="/">
               <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
                 Home
               </li>
             </Link>
-            <Link to={"/category"}>
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Category
-            </li>
+            <Link to="/category">
+              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+                Category
+              </li>
             </Link>
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+            {/* <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Whislist
             </li>
+
             <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Profile
-            </li>
-          
+            </li> */}
           </ul>
 
           <Link to="/cart">

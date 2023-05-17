@@ -20,7 +20,7 @@ export const CartItem = () => {
           return <div key={item._id} className="flex items-center justify-between gap-6 mt-6">
             <div className="flex items-center gap-2">
               <CloseIcon onClick={()=> dispatch(deleteFromCart(item._id))}  className="text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300"/>
-              <img src={item.image} className="w-32 h-32 object-cover" alt="" />
+              <img src={"http://127.0.0.1:5000/images/"+ item.image} className="w-32 h-32 object-cover" alt="" />
             </div> 
             <h2 className="w-52 ">{item.title}</h2>
             <div className='w-52 flex items-center justify-between text-gray-500 gap-4 border p-3'>

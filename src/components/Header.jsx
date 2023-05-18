@@ -1,13 +1,39 @@
 // import { LogoLight } from '../assets/index';
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const productData = useSelector((state) => state.bazar.productData);
   const UserInfo = useSelector((state) => state.bazar.userInfo);
   console.log(UserInfo);
   // console.log(productData)
+
+  const [isLogedIn, setIsLogedIn] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem('customer_id')) {
+      setIsLogedIn(true)
+    } else {
+      setIsLogedIn(false)
+    }
+  }, [isLogedIn])
+
+  const logout = () => {
+    localStorage.removeItem('customer_id');
+    setIsLogedIn(false);
+    navigate("/signin");
+  }
+
+  const login = () => {
+    // localStorage.removeItem('customer_id');
+
+    navigate("/signin");
+  }
+
   return (
     <div className="z-50 w-full h-30 bg-white border-b-[1px] z-index-1 sticky top-0 border-b-gray-800 font-titleFont ">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
@@ -43,7 +69,8 @@ export const Header = () => {
               <ShoppingCartIcon />
             </div>
           </Link>
-          {/* <Link to={"/login"}>Log In</Link> */}
+          {localStorage.getItem('customer_id') ? (<Link onClick={logout} >Logout</Link>) : (<Link  to={"/signin"} >Log In</Link>)}
+          
           {UserInfo && <p>{UserInfo.name}</p>}
         </div>
       </div>

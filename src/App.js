@@ -10,6 +10,9 @@ import { Login } from './pages/login/Login';
 import NoPage from './pages/NoPage';
 import { Category } from './pages/Category/Category';
 import { ProductByCategory } from './pages/Category/ProductCategory';
+import { LogIn, Signin } from './pages/auth/Signin';
+import { SignUp } from './pages/auth/SignUp';
+
 
 
 const Layout = ()=>{
@@ -48,12 +51,16 @@ const router = createBrowserRouter([
         element: <Cart/>
       },
       {
-        path: '/login',
-        element: <Login/>
+        path: '/signin',
+        element: <Signin />
+      },
+      {
+        path: '/signup',
+        element: <SignUp />
       },
       {
         path: '*',
-        element: <NoPage/>
+        element: <NoPage />
       }
     ]
   }
